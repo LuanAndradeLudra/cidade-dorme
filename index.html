@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo de Cartas de Personagens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="setup-screen">
+      <h1>Quantas pessoas vão jogar?</h1>
+      <div class="input-container">
+        <input type="number" id="inputPessoas" min="5" value="5">
+        <button class="start-btn" onclick="iniciarJogo()">Iniciar Jogo</button>
+      </div>
+    </div>
+
+    <div class="game-screen" id="telaJogo">
+      <div class="card" onclick="revelarPersonagem()">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="card-pattern"></div>
+            <h2>Clique para revelar</h2>
+          </div>
+          <div class="card-back">
+            <div id="resultado"></div>
+          </div>
+        </div>
+      </div>
+      <button id="fecharBtn" onclick="fecharRevelacao()">Próximo Jogador</button>
+      <button id="reiniciarBtn" onclick="reiniciar()">Recomeçar Jogo</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
